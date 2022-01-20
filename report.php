@@ -25,6 +25,9 @@
     <title>Laporan </title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+</style>
 </head>
 <body>
 <?php include './navbar.php'; ?>
