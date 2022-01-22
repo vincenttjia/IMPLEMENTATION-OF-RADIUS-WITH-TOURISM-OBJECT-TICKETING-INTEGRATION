@@ -98,7 +98,7 @@ for($i=1;$i<=$jumlah;$i++){
 		$q->execute();
 		$q->close();
 
-		$codeContents = 'http://freewifi.kemendesa.go.id/login?user='.$username.'&password='.$password;
+		$codeContents = 'http://wifi.vincenttjia.tech/login?user='.$username.'&password='.$password;
 		$randname = mt_rand().".png";
 		QRcode::png($codeContents, $tempDir.$randname, QR_ECLEVEL_L, 3);
 
