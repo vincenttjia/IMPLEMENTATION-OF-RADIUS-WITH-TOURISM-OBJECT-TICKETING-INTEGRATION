@@ -18,7 +18,7 @@ if($_SESSION['needReset']==0){?>
 	    </div>
 	    <div class="mx-auto my-2 pl-3 pr-3 order-0 order-md-1 position-relative">
 	        <a class="mx-auto" href="#">
-	            <img src="./img/logo.png" height="100" class="rounded-circle">
+	            <img src="./img/logo-taman-bunga-celosia.png" height="100" class="rounded-circle">
 	        </a>
 	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
 	            <span class="navbar-toggler-icon"></span>
