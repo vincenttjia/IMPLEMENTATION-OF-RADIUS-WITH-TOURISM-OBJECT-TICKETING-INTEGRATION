@@ -20,16 +20,9 @@ This is a Thesis project of **Vincent Tjianattan(2201778495)** and Nadine **Orio
 
 ## Instruction
 ```
-git clone https://github.com/vincenttjia/IMPLEMENTATION-OF-RADIUS-WITH-TOURISM-OBJECT-TICKETING-INTEGRATION.git
+git clone https://github.com/vincenttjia/IMPLEMENTATION-OF-RADIUS-WITH-TOURISM-OBJECT-TICKETING-INTEGRATION.git && cd "IMPLEMENTATION-OF-RADIUS-WITH-TOURISM-OBJECT-TICKETING-INTEGRATION"
 ```
 
-```
-cd "IMPLEMENTATION-OF-RADIUS-WITH-TOURISM-OBJECT-TICKETING-INTEGRATION"
-```
-
-```
-sudo chmod +x ./autosetup.sh
-```
 
 ```
 sudo ./autosetup.sh
