@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "adminpanel";
-$password = "adminpanel";
+$username = "";
+$password = "";
 $database = "radius";
 
 $connect = mysqli_connect($servername,$username,$password,$database);
