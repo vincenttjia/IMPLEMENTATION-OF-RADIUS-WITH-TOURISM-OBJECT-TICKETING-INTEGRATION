@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Berhasil Keluar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrap">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">$(identity)</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 mylogo">
+                    <a href="#" ref="index.html"><img src="img/logo.png"  width="130" height=80 alt="logo"></a>
+                </div>
+                <div class="col-sm-10 textlogo">
+                    <h1>Taman Bunga Celosia Hotspot</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            $(if error)
+                <div class="alert alert-danger">$(error)</div>
+            $(endif)
+
+            <div class="alert alert-success">Anda berhasil Keluar</div>
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td>Nama Pengguna</td>
+                            <td>$(username)</td>
+                        </tr>
+                        <tr>
+                            <td>Alamat IP</td>
+                            <td>$(ip)</td>
+                        </tr>
+                        <tr>
+                            <td>Lama Pengunaan</td>
+                            <td>$(uptime)</td>
+                        </tr>
+                        $(if session-time-left)
+                            <tr>
+                                <td>Sisa Penggunaan</td>
+                                <td>$(session-time-left)</td>
+                            </tr>
+                        $(endif)
+                        <tr>
+                            <td>bytes up/down:</td>
+                            <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <center><a href="login" class="btn btn-success">Masuk Kembali</a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">Powered by Binus University</p>
+    </div>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Taman Bunga Celosia | Status</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+<div id="wrap">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">$(identity)</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 mylogo">
+                    <a href="#" ref="index.html"><img src="img/logo.png" height=80  width="130" alt="logo"></a>
+                </div>
+                <div class="col-sm-10 textlogo">
+                    <h1>Taman Bunga Celosia Hotspot</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="row">
+            $(if error)
+                <div class="alert alert-danger">$(error)</div>
+            $(endif)
+
+            $(if login-by == 'trial')
+                <div class="alert alert-info">Selamat Datang, trial user!</div>
+            $(elif login-by != 'mac')
+                <div class="alert alert-info">Anda sudah terhubung ke Internet sebagai $(username)</div>
+            $(endif)
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td>Alamat IP:</td>
+                            <td>$(ip)</td>
+                        </tr>
+                        <tr>
+                            <td>Total Penggunaan Upload/Download</td>
+                            <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                        </tr>
+                        $(if session-time-left)
+                        <tr>
+                            <td>Sisa Penggunaan:</td>
+                            <td>$(session-time-left)</td>
+                        </tr>
+                        $(endif)
+                        <tr>
+                            <td>Lama Pengunaan:</td>
+                            <td>$(uptime)</td>
+                        </tr>
+                        $(if refresh-timeout)
+                        <tr>
+                            <td>Halaman ini Update Setiap</td>
+                            <td>$(refresh-timeout)</td>
+                        </tr>
+                        $(endif)
+                        </tbody>
+                    </table>
+                    <center><a href="logout?erase-cookie=true" class="btn btn-danger">Keluar</a></center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p class="text-muted">Powered by KEMENTERIAN DESA, PDT DAN TRANSMIGRASI</p>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

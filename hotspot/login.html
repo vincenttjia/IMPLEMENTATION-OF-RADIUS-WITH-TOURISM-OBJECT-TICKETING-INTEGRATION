@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Taman Bunga Celosia | Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="wrap">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">$(identity)</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 mylogo">
+                    <a href="#" ref="index.html"><img src="img/logo.png" width="130" height=80 alt="logo"></a>
+                </div>
+                <div class="col-sm-10 textlogo">
+                    <h1>Taman Bunga Celosia Hotspot</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-md-6 col-sm-12">
+            <div class="row">
+                $(if error)
+                    <div class="alert alert-danger">$(error)</div>
+                $(endif)
+
+                <div class="alert alert-info">Informasi Login anda berada di karcis masuk. Terimakasih</div>
+
+                $(if trial == 'yes')
+                    <div class="alert alert-info">
+                        Free trial available, <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">click here</a>.
+                    </div>
+                $(endif)
+            </div>
+
+            <div class="row">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form id="loginForm" class="form-horizontal" role="form" action="$(link-login-only)" method="post">
+                            <input type="hidden" name="dst" value="$(link-orig)"/>
+                            <input type="hidden" name="popup" value="true"/>
+
+                            <div class="form-group">
+                                <label for="inputLogin" class="col-sm-3 control-label">Nama Pengguna</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control input-lg" id="inputLogin" name="username"
+                                           placeholder="Username" autofocus required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-sm-3 control-label">Kata Sandi</label>
+
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control input-lg" id="inputPassword" name="password"
+                                           placeholder="Password" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <button type="submit" class="btn btn-primary btn-block btn-lg">OK</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <div class="card hovercard">
+                        <div class="cardheader">
+                        </div>
+                        <div class="avatar">
+                        <img alt="" src="img/logo.png">
+                        </div>
+                        <div class="info">
+                        <div class="title">
+                        WiFi Gratis
+                        </div>
+                        <div class="desc">Dapatkan informasi Nama Pengguna dan Kata sandi di karcis anda.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container align-middle">
+        <br><p>Powered by Binus University</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+$(if chap-id)
+    <script type="text/javascript" src="md5.js"></script>
+    <script type="text/javascript">
+        $('#loginForm').submit(function () {
+            var password = $('#inputPassword');
+            password.val(hexMD5('$(chap-id)' + password.val() + '$(chap-challenge)'));
+        });
+    </script>
+$(endif)
+
+</body>
+</html>
