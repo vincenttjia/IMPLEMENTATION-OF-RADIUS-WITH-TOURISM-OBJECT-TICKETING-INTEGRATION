@@ -13,7 +13,7 @@
 - [Instruction](#Instruction)
 
 ## Description
-This is a Thesis project of Vincent Tjianattan(2201778495) and Nadine Oriona Susanto(//REPLACE WITH NIM) for Binus University. This project is setting up a FreeRADIUS server, nginx as Management panel and a Mikrotik Router as a NAS.
+This is a Thesis project of **Vincent Tjianattan(2201778495)** and Nadine **Oriona Susanto(//REPLACE WITH NIM)** for Binus University. This project is setting up a FreeRADIUS server, nginx as Management panel and a Mikrotik Router as a NAS.
 
 ## Prerequisite
 - Ubuntu 20.04 LTS installed with git.
