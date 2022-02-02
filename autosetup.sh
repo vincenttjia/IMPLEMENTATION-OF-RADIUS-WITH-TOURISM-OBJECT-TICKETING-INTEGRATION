@@ -98,7 +98,7 @@ function installFreeRadius() {
     sed -i 's/#\tpassword = "radpass"/\tpassword = "'${radiusPass}'"/g' /etc/freeradius/3.0/mods-available/sql
     sed -i 's/#\tread_clients = yes/\tread_clients = yes/g' /etc/freeradius/3.0/mods-available/sql
 
-    cat <<EOF >> clients.conf
+    cat <<EOF >> /etc/freeradius/3.0/clients.conf
 client mikrotik{
     ipaddr = ${routerIP}
     secret = ${routerSecret}
