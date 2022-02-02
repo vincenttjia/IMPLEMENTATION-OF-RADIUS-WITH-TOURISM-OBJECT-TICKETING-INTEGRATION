@@ -60,9 +60,7 @@ function installQuestions() {
 }
 
 function installMariaDB() {
-
     echo -e "${ORANGE}Memulai Instalasi MariaDB...${NC}"
-    apt update
     apt install mariadb-server mariadb-client -y
     mysql -e "CREATE DATABASE radius;"
     mysql radius < /etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql
