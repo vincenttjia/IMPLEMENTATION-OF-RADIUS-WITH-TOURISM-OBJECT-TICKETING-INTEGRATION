@@ -19,20 +19,17 @@
 	$mi->attachIterator(new ArrayIterator($guestpassword));
 	$mi->attachIterator(new ArrayIterator($qr));
 
-	echo "Nomor Tiket : ".$_SESSION['nomortiket']."<br><br>";
-	echo "Rp".number_format($_SESSION['hargapertiket'], 0, ',', '.')."/Ticket<br>";
-	echo $_SESSION['qty']." Ticket<br>";
-	echo "Jumlah : Rp".number_format($_SESSION['jumlahbayar'], 0, ',', '.')."<br>";
-
 	foreach ($mi as $value) {
-		echo "<hr>";
+		echo "Nomor Tiket : ".$_SESSION['nomortiket']."<br><br>";
+		echo "Rp".number_format($_SESSION['hargapertiket'], 0, ',', '.')."/Ticket<br>";
 		list($username,$password,$qraddress) = $value;
 		echo "Username: ".$username."<br>";
 		echo "Password: ".$password."<br><br>";
 		echo '<img src="./tmp/'.$qraddress.'"><br><br>';
+		echo "<br><br><br><br>";
+		echo "<hr>";
+		echo "<br><br><br><br><br><br><br><br><br>";
 	}
-
-	echo"<hr>";
 
 
 ?>
